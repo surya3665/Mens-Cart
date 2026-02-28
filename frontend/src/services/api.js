@@ -3,7 +3,7 @@ import axios from 'axios'
 // Create a configured axios instance
 // baseURL points to our Express backend
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://menscart-backend.onrender.com/api',
 })
 
 // ─── Request Interceptor ──────────────────────────────────────────────────────
