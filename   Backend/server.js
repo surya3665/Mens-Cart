@@ -28,7 +28,12 @@ const __dirname = path.dirname(__filename);
 
 // ─── Middleware ────────────────────────────────────────────────────────────────
 // cors: Allows frontend (React) to communicate with this backend
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mens-cart.vercel.app",
+    credentials: true,
+  })
+);
 
 // express.json: Parses incoming JSON request bodies (req.body)
 app.use(express.json());
