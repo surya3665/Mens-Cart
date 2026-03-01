@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import toast from 'react-hot-toast'
+import logo from '../assets/logo.png'
 
 const Navbar = ({ cartCount = 0 }) => {
   const { user, logout } = useAuth()
@@ -25,7 +26,7 @@ const Navbar = ({ cartCount = 0 }) => {
 
           {/* Logo */}
           <Link to="/" onClick={close} className="flex items-center gap-2 font-display text-xl font-bold text-white tracking-tight">
-          <img src="/src/assets/logo.png" alt="Men's Cart" className="h-20 w-auto" />
+          <img src={logo} alt="Men's Cart" className="h-20 w-auto" />
             <span>Men's<span className="text-amber-400">Cart</span></span>
           </Link>
 
